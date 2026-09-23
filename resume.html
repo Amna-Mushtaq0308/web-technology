@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My CV</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            background-color: white;
+            display: grid;
+            grid-template-columns: 30% 70%;
+            box-shadow: 0px 0px 10px gray;
+        }
+        .container1 {
+            background-color: #eeeeee;
+            padding: 30px;
+            text-align: center;
+        }
+        .container1 img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .container1 h1 {
+            font-size: 25px;
+            color: #333333;
+            margin-bottom: 25px;
+        }
+        .container1 a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+        }
+        .container1 a:hover {
+            background-color: black;
+            color: white;
+            transform: scale(1.05);
+        }
+        .container1 p {
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+        .container2 {
+            padding: 30px;
+        }
+        section {
+            margin-bottom: 25px;
+        }
+        section h1 {
+            color: #333333;
+            font-size: 24px;
+            border-bottom: 3px solid #555555;
+            padding-bottom: 8px;
+        }
+        section p {
+            line-height: 1.3;
+        }
+        li {
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #dddddd;
+            margin: 20px 0;
+        }
+        @media screen and (max-width: 700px) {
+            .container {
+                width: 100%;
+                grid-template-columns: 1fr;
+            }
+            .container1 {
+                padding: 25px;
+            }
+            .container1 img {
+                width: 150px;
+                height: 150px;
+            }
+            .container2 {
+                padding: 20px;
+            }
+            section h1 {
+                font-size: 22px;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            body {
+                padding: 10px;
+            }
+            .container1 img {
+                width: 120px;
+                height: 120px;
+            }
+            .container1 h1 {
+                font-size: 22px;
+            }
+            section h1 {
+                font-size: 20px;
+            }
+            .container2 {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container1">
+            <img src="https://i.pinimg.com/originals/35/ae/c5/35aec52c8ae752bbc236f2641a6d53fe.jpg" alt="Profile Picture">
+            <h1>Contact Us</h1>
+            <a href="https://twitter.com" target="_blank">
+                Twitter
+            </a>
+            <a href="https://facebook.com" target="_blank">
+                Facebook
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                Instagram
+            </a>
+            <p>
+                Contact: +123456789
+            </p>
+            <p>
+                Email: amna.mushtaq@example.com
+            </p>
+        </div>
+
+        <div class="container2">
+            <section>
+                <h1>Profile</h1>
+                <h2>Amna Mushtaq</h2>
+                <p>
+                    Web Developer
+                </p>
+                <p>
+                    I am a passionate Web Developer interested
+                    in creating simple, attractive and responsive
+                    websites.
+                </p>
+            </section>
+
+            <section>
+                <h1>Career Objective</h1>
+                <p>
+                    To secure a challenging position as a Web
+                    Developer where I can utilize my skills and
+                    knowledge to create useful and attractive
+                    websites.
+                </p>
+            </section>
+            
+            <section>
+                <h1>Education</h1>
+                <ul>
+                    <li>
+                        <b>Bachelor's Degree in Computer Science</b>
+                    </li>
+                    <p>
+                        University of XYZ, 2020-2024
+                    </p>
+                    <li>
+                        <b>High School Diploma</b>
+                    </li>
+                    <p>
+                        ABC High School, 2016-2020
+                    </p>
+                </ul>
+            </section>
+            
+            <section>
+                <h1>Experience</h1>
+                <ul>
+                    <li>
+                        <b>Internship at XYZ Company</b>
+                    </li>
+                    <p>
+                        Worked on web development projects and
+                        gained hands-on experience in HTML, CSS
+                        and JavaScript.
+                    </p>
+                    <li>
+                        <b>Freelance Web Developer</b>
+                    </li>
+                    <p>
+                        Developed websites for small businesses
+                        and individuals, focusing on responsive
+                        design.
+                    </p>
+                </ul>
+            </section>
+
+            <section>
+                <h1>Skills</h1>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                </ul>
+            </section>
+
+            <section>
+                <h1>Projects</h1>
+                <ul>
+                    <li>
+                        Developed a personal portfolio website
+                        to showcase my skills and projects.
+                    </li>
+                    <li>
+                        Created a responsive e-commerce website
+                        for a local business.
+                    </li>
+                    <li>
+                        Built a web application for task management,
+                        allowing users to create, update and manage
+                        tasks.
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
