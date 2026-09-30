@@ -1,0 +1,71 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: Arial; 
+} 
+header 
+{ text-align: center;
+     padding: 20px; 
+     background-color: lightblue; 
+    } 
+    nav { 
+        padding: 15px; 
+        text-align: center; 
+        background-color: black; 
+    } 
+    nav a { 
+        color: white; 
+        text-decoration: none; 
+        margin: 20px; 
+    } 
+    .admission { 
+        padding: 30px; 
+        text-align: center; 
+    } 
+    .move { 
+        position: relative; 
+        left: 20px; 
+        margin: 20px; 
+    } 
+    .cards { 
+        display: flex; 
+        justify-content: center; 
+        gap: 20px; 
+    } 
+    .card { 
+        width: 250px; 
+        height: 200px; 
+        padding: 40px; 
+        margin: 10px; 
+        border: 2px solid black; 
+        position: relative; 
+    } 
+    .badge { 
+        position: absolute; 
+        top: 10px; 
+        right: 10px; 
+        background-color: red; 
+        color: white; 
+        padding: 5px; 
+    } 
+    .apply { 
+        position: fixed; 
+        bottom: 20px; 
+        right: 20px; 
+        padding: 12px; 
+    } 
+   @media screen and (min-width: 601px) and (max-width: 1024px)
+
+{
+
+  .profile-card {
+
+        width: 500px;
+
+        margin: 30px auto;
+
+        padding: 25px;
+
+    }
+}
