@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 15px;
+}
+
+.header h1 {
+    color: red;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    background: DarkSlateBlue;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.score-data {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.score-data span {
+    color: SkyBlue;
+    font-size: 12px;
+}
+
+.score-data strong {
+    font-size: 17px;
+}
+
+.road {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    margin: auto;
+    overflow: hidden;
+    background: #36454F;
+    border-left: 6px solid #708090;
+    border-right: 6px solid #708090;
+    box-shadow: none;
+}
+
+.lane-line {
+    position: absolute;
+    top: 0;
+    width: 8px;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        white 0px,
+        white 40px,
+        transparent 40px,
+        transparent 80px
+    );
+    animation: roadMove 0.7s linear infinite;
+}
+
+.lane-line.left {
+    left: 93px;
+}
+
+.lane-line.right {
+    right: 93px;
+}
+
+@keyframes roadMove {
+    from {
+        background-position-y: 0;
+    }
+
+    to {
+        background-position-y: 80px;
+    }
+}
+
+.player_car,
+.enemy {
+    position: absolute;
+    width: 55px;
+    height: 100px;
+    border-radius: 3px;
+    box-shadow: none;
+    border: 2px solid;
+}
+
+.player_car {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: red;
+    border-color: Crimson;
+    box-shadow: inset 5px 0 5px LightCoral;
+    z-index: 2;
+}
+
+.enemy {
+    background: RoyalBlue;
+    border-color: DeepSkyBlue;
+    box-shadow: inset 5px 0 5px LightBlue;
+}
+
+.enemy-car1 {
+    left: 25px;
+    top: -110px;
+    animation: enemyMove 4s linear infinite;
+}
+
+.enemy-car2 {
+    right: 25px;
+    top: -250px;
+    background: Goldenrod;
+    border-color: Gold;
+    animation: enemyMove 5s linear infinite;
+}
+
+.enemy-car3 {
+    left: 50%;
+    top: -400px;
+    background: RebeccaPurple;
+    border-color: Violet;
+    transform: translateX(-50%);
+    animation: enemyMove 6s linear infinite;
+}
+
+@keyframes enemyMove {
+    from {
+        top: -110px;
+    }
+
+    to {
+        top: 520px;
+    }
+}
+
+.window {
+    position: absolute;
+    left: 9px;
+    width: 33px;
+    height: 22px;
+    background: SkyBlue;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.front-window {
+    top: 10px;
+}
+
+.back-window {
+    bottom: 10px;
+}
+
+.wheel {
+    position: absolute;
+    width: 8px;
+    height: 22px;
+    background: black;
+    border: 1px solid Gray;
+    border-radius: 3px;
+}
+
+.wheel-left {
+    left: -7px;
+    top: 18px;
+}
+
+.wheel-right {
+    right: -7px;
+    top: 18px;
+}
+
+.wheel-left-back {
+    left: -7px;
+    bottom: 18px;
+}
+
+.wheel-right-back {
+    right: -7px;
+    bottom: 18px;
+}
+
+.headlight {
+    position: absolute;
+    width: 10px;
+    height: 6px;
+    background: Yellow;
+    border-radius: 3px;
+    top: 3px;
+    box-shadow: 0 0 5px Yellow;
+}
+
+.headlight-left {
+    left: 5px;
+}
+
+.headlight-right {
+    right: 5px;
+}
+
+.bumper {
+    position: absolute;
+    bottom: -4px;
+    left: 7px;
+    width: 37px;
+    height: 5px;
+    background: Silver;
+    border-radius: 3px;
+}
+
+.instructions {
+    margin: 10px 0;
+}
+
+.instructions h1 {
+    font-size: 20px;
+    color: SkyBlue;
+    margin-bottom: 8px;
+}
+
+.instructions p {
+    color: white;
+}
+
+.start-button {
+    padding: 10px 30px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.start-button:hover {
+    background: DeepSkyBlue;
+    transform: scale(1.05);
+}
+
+@media (max-height: 700px) {
+    .game-container {
+        padding: 8px;
+        margin: 5px auto;
+    }
+
+    .header p {
+        margin-bottom: 10px;
+    }
+
+    .scoreboard {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .road {
+        height: 320px;
+    }
+
+    .instructions {
+        margin: 6px 0;
+    }
+
+    .start-button {
+        padding: 8px 25px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .game-container {
+        max-width: 500px;
+        padding: 15px;
+    }
+
+    .road {
+        width: 300px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        width: 100%;
+        padding: 10px;
+        margin: 5px auto;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .scoreboard {
+        padding: 10px 5px;
+    }
+
+    .road {
+        width: 280px;
+        height: 380px;
+    }
+
+    .lane-line.left {
+        left: 85px;
+    }
+
+    .lane-line.right {
+        right: 85px;
+    }
+
+    .instructions h1 {
+        font-size: 18px;
+    }
+
+    .start-button {
+        padding: 10px 25px;
+    }
+}
